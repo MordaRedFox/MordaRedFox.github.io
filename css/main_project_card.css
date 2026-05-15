@@ -1,0 +1,329 @@
+.project-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(20, 184, 166, 0.2);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    animation: fadeInScale 0.5s ease-out backwards;
+}
+
+/* Анимация появления карточек */
+.project-card:nth-child(1) { animation-delay: 0.05s; }
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.15s; }
+.project-card:nth-child(4) { animation-delay: 0.2s; }
+.project-card:nth-child(5) { animation-delay: 0.25s; }
+.project-card:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.2);
+    border-color: #14b8a6;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.project-card h3 a {
+    color: #0f172a;
+    text-decoration: none;
+    background: linear-gradient(120deg, #0d9488, #2563eb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
+}
+
+.project-card h3 a:hover {
+    background: linear-gradient(120deg, #2563eb, #38bdf8);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.project-description {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.project-language {
+    background: #eef2ff;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1e40af;
+    transition: all 0.2s;
+}
+
+.project-card:hover .project-language {
+    background: #14b8a6;
+    color: white;
+}
+
+.project-link a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #2563eb, #0d9488);
+    color: white;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.project-link a:hover {
+    background: linear-gradient(135deg, #1d4ed8, #0f766e);
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(37,99,235,0.3);
+}
+
+/* Сообщения загрузки/ошибки */
+.loading, .error-message, .no-projects {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255,255,255,0.8);
+    border-radius: 1.5rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .project-card {
+        padding: 1.3rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .project-language {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.7rem;
+    }
+
+    .project-link a {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-card {
+        padding: 1.2rem;
+        border-radius: 1.3rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .project-description {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-meta {
+        margin-top: 0.3rem;
+        padding-top: 0.6rem;
+    }
+
+    .project-language {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .project-link a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px) scale(1.01);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        padding: 1rem;
+        border-radius: 1.2rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .project-language {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .project-link a {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.7rem;
+    }
+
+    .project-meta {
+        padding-top: 0.5rem;
+    }
+
+    .loading, .error-message, .no-projects {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        padding: 0.9rem;
+        border-radius: 1rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .project-description {
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 0.2rem;
+        padding-top: 0.5rem;
+    }
+
+    .project-language {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.5rem;
+    }
+
+    .project-link a {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+
+    .loading, .error-message, .no-projects {
+        padding: 1.2rem;
+        font-size: 0.85rem;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        padding: 0.75rem;
+        border-radius: 0.9rem;
+    }
+
+    .project-card h3 {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 0.7rem;
+        line-height: 1.35;
+    }
+
+    .project-language {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.4rem;
+    }
+
+    .project-link a {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .project-meta {
+        gap: 0.4rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .project-card {
+        padding: 0.6rem;
+        border-radius: 0.8rem;
+    }
+
+    .project-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .project-description {
+        font-size: 0.65rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .project-meta {
+        padding-top: 0.4rem;
+        gap: 0.3rem;
+    }
+
+    .project-language {
+        font-size: 0.5rem;
+        padding: 0.05rem 0.35rem;
+    }
+
+    .project-link a {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.4rem;
+    }
+    
+    .loading, .error-message, .no-projects {
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+}
