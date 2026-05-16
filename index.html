@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
           viewport-fit=cover">
     <title>Владислав Куропатин | C++ разработчик</title>
+    <link rel="icon" type="image/x-icon" href="media/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/icons/apple-touch-icon.png">
+    <link rel="manifest" href="media/icons/site.webmanifest">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/main_project_card.css">
 </head>
@@ -23,17 +28,16 @@
                 <div class="about-info">
                     <h2>Обо мне</h2>
                     <p style="text-align: justify;">
-                        Привет! Я Владислав, начинающий программист и студент 
+                        Привет! Я Владислав, начинающий разработчик и студент 
                         РТУ МИРЭА. Мой путь в IT начался с увлечения разработкой 
                         и желания делать что-то своими руками. Я постоянно учусь 
                         новым технологиям и стараюсь поспевать за трендами. C++ 
                         поразил и зацепил в первые же дни знакомства из-за его 
                         сложности и возможности контролировать всю программу 
-                        целиком. То, что в других языках 
-                        программирования неявно и скрыто магией, тут всплывает 
-                        в своём истинном обличии. В свободное время люблю 
-                        расслабляться в видеоиграх, наслаждаться природой и 
-                        разбирать внедорожные мотоциклы.
+                        целиком. То, что в других языках программирования неявно
+                        и скрыто магией, тут всплывает в своём истинном обличии.
+                        В свободное время люблю расслабляться в видеоиграх,
+                        наслаждаться природой и разбирать внедорожные мотоциклы.
                     </p>
                 </div>
             </div>
@@ -70,7 +74,6 @@
                         <span class="skill-tag">C++17/20</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">C#</span>
-                        <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
                     </div>
@@ -110,6 +113,12 @@
                 </div>
             </div>
         </section>
+        <section class="achievements" id="achievements">
+            <h2 class="section-title">🏆 Мои достижения</h2>
+            <div class="achievements-grid" id="achievementsGrid">
+                <div class="loading-achievements">Загрузка достижений...</div>
+            </div>
+        </section>
         <section class="projects" id="projects">
             <h2 class="section-title">📂 Мои проекты</h2>
             <div class="projects-grid" id="projectsGrid">
@@ -121,7 +130,12 @@
                 Владислав Куропатин · <strong>Портфолио</strong></p>
         </footer>
     </div>
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
     <script src="js/project_cards.js"></script>
+    <script src="js/achievements.js"></script>
     <script src="js/update_year.js"></script>
 </body>
 </html>
