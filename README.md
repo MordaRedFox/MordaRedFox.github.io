@@ -68,7 +68,8 @@ portfolio/
 ├── css/
 │   ├── main_project_card.css       # Стили карточек проектов
 │   ├── main.css                    # Основные стили (главная страница)
-│   └── project.css                 # Стили для страниц проектов
+│   ├── project.css                 # Стили для страниц проектов
+│   └── social_credit.css           # Стили для мемной анимации при лайке
 ├── js/
 │   ├── achievements.js             # Загрузка достижений
 │   ├── project_cards.js            # Рендер карточек проектов
@@ -77,7 +78,8 @@ portfolio/
 │   ├── achievements/
 │   ├── icons/
 │   ├── main/
-│   └── project_pizzeria/
+│   ├── project_pizzeria/
+│   └── sounds/
 ├── index.html                      # Главная страница
 ├── LICENSE
 ├── project_ml.html                 # Проект по изучению ML

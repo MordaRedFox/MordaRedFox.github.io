@@ -1,4 +1,3 @@
-// Данные о проектах: id, название, краткое описание, язык, ссылка на локальную страницу
 const projectsData = [
     {
         id: 1,
@@ -23,7 +22,6 @@ const projectsData = [
     }
 ];
 
-// Функция отрисовки карточек
 function renderProjectCards() {
     const grid = document.getElementById('projectsGrid');
     if (!grid) return;

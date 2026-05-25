@@ -68,7 +68,8 @@ portfolio/
 ├── css/
 │   ├── main_project_card.css       # Project card styles
 │   ├── main.css                    # Basic styles (main page)
-│   └── project.css                 # Styles for project pages
+│   ├── project.css                 # Styles for project pages
+│   └── social_credit.css           # Meme animation styles for likes
 ├── js/
 │   ├── achievements.js             # Loading achievements
 │   ├── project_cards.js            # Rendering project cards
@@ -77,7 +78,8 @@ portfolio/
 │   ├── achievements/
 │   ├── icons/
 │   ├── main/
-│   └── project_pizzeria/
+│   ├── project_pizzeria/
+│   └── sounds/
 ├── index.html                      # Home page
 ├── LICENSE
 ├── project_ml.html                 # ML research project

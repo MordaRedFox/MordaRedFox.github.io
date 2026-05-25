@@ -1,0 +1,554 @@
+.like-button {
+    background: linear-gradient(135deg, #f0f0f0, #fff);
+    border: 1px solid rgba(20, 184, 166, 0.4);
+    border-radius: 2rem;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #2c3e66;
+    margin-top: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.like-button:hover {
+    background: linear-gradient(135deg, #ffe4e4, #ffcdcd);
+    border-color: #f43f5e;
+    transform: scale(1.02);
+    color: #b91c1c;
+}
+
+.like-button:active {
+    transform: scale(0.96);
+}
+
+.like-count {
+    background: #eef2ff;
+    border-radius: 40px;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #0f766e;
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.achievement-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.2rem;
+}
+
+.achievement-description {
+    flex: 1;
+    margin-bottom: 0.8rem;
+}
+
+.achievement-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-credit-party {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.credit-stamp {
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    background: rgba(220, 38, 38, 0.95);
+    backdrop-filter: blur(6px);
+    color: gold;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3rem;
+    border: 2px solid #ffd966;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    transform: rotate(-6deg);
+    z-index: 10000;
+    font-family: monospace;
+    white-space: nowrap;
+    animation: floatStamp 0.8s ease-out;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatUp 7s ease-out forwards;
+    pointer-events: none;
+    z-index: 10001;
+    filter: drop-shadow(0 0 6px gold);
+}
+
+.social-credit-toast {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #dc2626;
+    color: #ffef9e;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 10002;
+    white-space: nowrap;
+    font-family: 'Segoe UI', system-ui;
+    box-shadow: 0 0 45px gold;
+    border: 3px solid #ffcc00;
+    text-shadow: 2px 2px 0 #7c2d12;
+    animation: bounceToast 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+}
+
+.approve-card {
+    animation: fadeInUp 0.5s ease-out;
+    font-size: 1rem;
+    background: #facc15;
+    color: #b91c1c;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-weight: bold;
+    border: 2px solid #ef4444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    z-index: 10003;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-300px) rotate(30deg);
+    }
+}
+
+@keyframes floatStamp {
+    from {
+        transform: rotate(-40deg) scale(0.2);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(-6deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceToast {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .like-button {
+        padding: 0.25rem 0.8rem;
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .like-count {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.45rem;
+    }
+
+    .achievement-content {
+        padding: 1rem;
+    }
+
+    .achievement-description {
+        font-size: 0.9rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .credit-stamp {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+        bottom: 7%;
+        right: 2.5%;
+    }
+
+    .floating-emoji {
+        font-size: 1.8rem;
+    }
+
+    .social-credit-toast {
+        font-size: 1.8rem;
+        padding: 0.8rem 1.8rem;
+        top: 23%;
+    }
+
+    .approve-card {
+        font-size: 0.9rem;
+        padding: 0.35rem 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .like-button {
+        padding: 0.2rem 0.7rem;
+        font-size: 0.75rem;
+        gap: 0.35rem;
+        border-radius: 1.8rem;
+    }
+
+    .like-count {
+        font-size: 0.65rem;
+        padding: 0.05rem 0.4rem;
+        border-radius: 30px;
+    }
+
+    .achievement-content {
+        padding: 0.9rem;
+    }
+
+    .achievement-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .credit-stamp {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.9rem;
+        bottom: 6%;
+        right: 2%;
+        border-radius: 2.5rem;
+    }
+
+    .floating-emoji {
+        font-size: 1.6rem;
+    }
+
+    .social-credit-toast {
+        font-size: 1.5rem;
+        padding: 0.6rem 1.5rem;
+        top: 22%;
+        border-radius: 2.5rem;
+    }
+
+    .approve-card {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .like-button {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+        gap: 0.3rem;
+    }
+
+    .like-count {
+        font-size: 0.6rem;
+        padding: 0.05rem 0.35rem;
+    }
+
+    .achievement-content {
+        padding: 0.8rem;
+    }
+
+    .achievement-description {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .credit-stamp {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.8rem;
+        bottom: 5%;
+        right: 2%;
+        white-space: normal;
+        max-width: 130px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .floating-emoji {
+        font-size: 1.4rem;
+        animation-duration: 6s;
+    }
+
+    .social-credit-toast {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.2rem;
+        width: auto;
+        max-width: 85%;
+        white-space: normal;
+        text-align: center;
+        top: 20%;
+        border-radius: 2rem;
+    }
+
+    .approve-card {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.7rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .like-button {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.65rem;
+        gap: 0.25rem;
+        border-radius: 1.5rem;
+    }
+
+    .like-count {
+        font-size: 0.55rem;
+        padding: 0.05rem 0.3rem;
+    }
+
+    .achievement-content {
+        padding: 0.7rem;
+    }
+
+    .achievement-description {
+        font-size: 0.75rem;
+        line-height: 1.35;
+    }
+
+    .achievement-footer {
+        margin-top: 0.5rem;
+    }
+
+    .credit-stamp {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.6rem;
+        bottom: 4%;
+        right: 2%;
+        max-width: 110px;
+        border-width: 1.5px;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .floating-emoji {
+        font-size: 1.2rem;
+        animation-duration: 5s;
+    }
+
+    .social-credit-toast {
+        font-size: 1.1rem;
+        padding: 0.4rem 1rem;
+        max-width: 90%;
+        top: 18%;
+        border-width: 2px;
+    }
+
+    .approve-card {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 1.5rem;
+    }
+
+    @keyframes floatUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0) rotate(0deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-250px) rotate(25deg);
+        }
+    }
+
+    @keyframes bounceToast {
+        0% {
+            transform: translate(-50%, -50%) scale(0.2);
+            opacity: 0;
+        }
+        70% {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .like-button {
+        padding: 0.1rem 0.45rem;
+        font-size: 0.6rem;
+        gap: 0.2rem;
+        border-radius: 1.2rem;
+    }
+
+    .like-count {
+        font-size: 0.5rem;
+        padding: 0.05rem 0.25rem;
+        border-radius: 20px;
+    }
+
+    .achievement-content {
+        padding: 0.6rem;
+    }
+
+    .achievement-description {
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .credit-stamp {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+        bottom: 3%;
+        right: 2%;
+        max-width: 100px;
+        border-radius: 2rem;
+    }
+
+    .floating-emoji {
+        font-size: 1rem;
+        animation-duration: 4.5s;
+    }
+
+    .social-credit-toast {
+        font-size: 1rem;
+        padding: 0.35rem 0.8rem;
+        max-width: 95%;
+        top: 16%;
+    }
+
+    .approve-card {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.5rem;
+        border-radius: 1.2rem;
+    }
+
+    @keyframes floatStamp {
+        from {
+            transform: rotate(-40deg) scale(0.15);
+            opacity: 0;
+        }
+        to {
+            transform: rotate(-6deg) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .like-button {
+        padding: 0.1rem 0.4rem;
+        font-size: 0.55rem;
+        gap: 0.15rem;
+        border-radius: 1rem;
+    }
+
+    .like-count {
+        font-size: 0.45rem;
+        padding: 0.05rem 0.2rem;
+    }
+    
+    .achievement-content {
+        padding: 0.5rem;
+    }
+
+    .achievement-description {
+        font-size: 0.65rem;
+        line-height: 1.3;
+    }
+
+    .achievement-footer {
+        margin-top: 0.3rem;
+    }
+
+    .credit-stamp {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.4rem;
+        bottom: 2%;
+        right: 1%;
+        max-width: 85px;
+        border-width: 1px;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    .floating-emoji {
+        font-size: 0.9rem;
+        animation-duration: 4s;
+    }
+
+    .social-credit-toast {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+        max-width: 98%;
+        top: 15%;
+        border-radius: 1.5rem;
+    }
+
+    .approve-card {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.4rem;
+        border-radius: 1rem;
+    }
+
+    @keyframes floatUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0) rotate(0deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-200px) rotate(20deg);
+        }
+    }
+    
+    @keyframes bounceToast {
+        0% {
+            transform: translate(-50%, -50%) scale(0.1);
+            opacity: 0;
+        }
+        70% {
+            transform: translate(-50%, -50%) scale(1.02);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    }
+}
