@@ -4,26 +4,26 @@ const projectsData = [
         name: "Amateur Site Pizzeria",
         shortDesc: "Полноценный сайт пиццерии на Django с системой аутентификации и защитой от веб-угроз. Есть хорошая админ панель для управления пользователями и меню сайта. Сайт интерактивный и с секретами.",
         language: "Python / Django",
-        pageUrl: "project_pizzeria.html"
+        pageUrl: "projects/project_pizzeria.html"
     },
     {
         id: 2,
         name: "Введение в машинное обучение",
         shortDesc: "Реализация и анализ четырёх моделей ML: линейная и логистическая регрессия, дерево решений, случайный лес. Предсказание оценок, анализ удовлетворённости, распознавание цифр.",
         language: "Python / scikit-learn",
-        pageUrl: "project_ml.html"
+        pageUrl: "projects/project_ml.html"
     },
     {
         id: 3,
         name: "Telegram Feedback Bot",
         shortDesc: "Асинхронный Telegram-бот для сбора обратной связи с мультиязычностью, очередью сообщений и админ-панелью в самом боте.",
         language: "Python / python-telegram-bot",
-        pageUrl: "project_telegram_bot.html"
+        pageUrl: "projects/project_telegram_bot.html"
     }
 ];
 
 function renderProjectCards() {
-    const grid = document.getElementById('projectsGrid');
+    const grid = document.getElementById("projectsGrid");
     if (!grid) return;
     const cardsHTML = projectsData.map(project => `
         <div class="project-card">
@@ -38,19 +38,19 @@ function renderProjectCards() {
                 </span>
             </div>
         </div>
-    `).join('');
+    `).join("");
     grid.innerHTML = cardsHTML;
 }
 
 function escapeHtml(str) {
     return str.replace(/[&<>]/g, function(m) {
-        if (m === '&') return '&amp;';
-        if (m === '<') return '&lt;';
-        if (m === '>') return '&gt;';
+        if (m === "&") return "&amp;";
+        if (m === "<") return "&lt;";
+        if (m === ">") return "&gt;";
         return m;
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     renderProjectCards();
 });

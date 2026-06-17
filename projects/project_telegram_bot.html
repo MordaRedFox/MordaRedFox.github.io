@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram Feedback Bot</title>
-    <link rel="icon" type="image/x-icon" href="media/icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="media/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="media/icons/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="media/icons/apple-touch-icon.png">
-    <link rel="manifest" href="media/icons/site.webmanifest">
-    <link rel="stylesheet" href="css/project.css">
+    <link rel="icon" type="image/x-icon" href="../media/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/icons/apple-touch-icon.png">
+    <link rel="manifest" href="../media/icons/site.webmanifest">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/binary.css">
     <style>
         .feature-card, .feature-card ul, .feature-card li,
         .setup-block ul, .setup-block li,
@@ -32,8 +33,11 @@
     </style>
 </head>
 <body>
+    <div class="binary-wrapper">
+        <div class="binary-scroll" id="binaryScrollContainer"></div>
+    </div>
     <div class="container">
-        <a href="index.html" class="back-link">← Обратно на главную</a>
+        <a href="../index.html" class="back-link">← Обратно на главную</a>
         <div class="project-page">
             <h1>Telegram Feedback Bot</h1>
             <div class="project-meta-info">
@@ -135,7 +139,7 @@ python main.py</pre>
             <div class="project-links">
                 <a href="https://github.com/MordaRedFox/telegram-feedback-bot"
                    target="_blank" class="btn">🐙 GitHub репозиторий</a>
-                <a href="index.html" class="btn btn-outline">🏠 На главную</a>
+                <a href="../index.html" class="btn btn-outline">🏠 На главную</a>
             </div>
             <div class="warning-note" style="background: #e0f2fe;
                  border-left-color: #0284c7; margin-top: 2rem;">
@@ -150,6 +154,7 @@ python main.py</pre>
                 <strong>Telegram Feedback Bot</strong></p>
         </footer>
     </div>
-    <script src="js/update_year.js"></script>
+    <script src="../js/update_year.js"></script>
+    <script src="../js/binary.js"></script>
 </body>
 </html>

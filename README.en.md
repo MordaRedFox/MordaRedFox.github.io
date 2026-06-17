@@ -66,25 +66,28 @@ Live preview: https://mordaredfox.github.io/
 ```bash
 portfolio/
 ├── css/
-│   ├── main_project_card.css       # Project card styles
-│   ├── main.css                    # Basic styles (main page)
-│   ├── project.css                 # Styles for project pages
-│   └── social_credit.css           # Meme animation styles for likes
+│   ├── binary.css                    # Styles for binary code on the sides
+│   ├── main_project_card.css         # Project card styles
+│   ├── main.css                      # Basic styles (main page)
+│   ├── project.css                   # Styles for project pages
+│   └── social_credit.css             # Meme animation styles for likes
 ├── js/
-│   ├── achievements.js             # Loading achievements
-│   ├── project_cards.js            # Rendering project cards
-│   └── update_year.js              # Auto-update the year in the footer
-├── media/                          # Images used
+│   ├── achievements.js               # Loading achievements
+│   ├── binary.js                     # Adding binary code to the sides of the page
+│   ├── project_cards.js              # Rendering project cards
+│   └── update_year.js                # Auto-update the year in the footer
+├── media/                            # Images used
 │   ├── achievements/
 │   ├── icons/
 │   ├── main/
 │   ├── project_pizzeria/
 │   └── sounds/
-├── index.html                      # Home page
+├── projects/
+│   ├── project_ml.html               # ML research project
+│   ├── project_pizzeria.html         # Project with a pizzeria website
+│   └── project_telegram_bot.html     # Telegram bot project
+├── index.html                        # Home page
 ├── LICENSE
-├── project_ml.html                 # ML research project
-├── project_pizzeria.html           # Project with a pizzeria website
-├── project_telegram_bot.html       # Telegram bot project
 ├── README.en.md
 └── README.md
 ```

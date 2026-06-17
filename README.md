@@ -66,25 +66,28 @@
 ```bash
 portfolio/
 ├── css/
-│   ├── main_project_card.css       # Стили карточек проектов
-│   ├── main.css                    # Основные стили (главная страница)
-│   ├── project.css                 # Стили для страниц проектов
-│   └── social_credit.css           # Стили для мемной анимации при лайке
+│   ├── binary.css                    # Стили для двоичного кода по бокам
+│   ├── main_project_card.css         # Стили карточек проектов
+│   ├── main.css                      # Основные стили (главная страница)
+│   ├── project.css                   # Стили для страниц проектов
+│   └── social_credit.css             # Стили для мемной анимации при лайке
 ├── js/
-│   ├── achievements.js             # Загрузка достижений
-│   ├── project_cards.js            # Рендер карточек проектов
-│   └── update_year.js              # Автообновление года в футере
-├── media/                          # Используемые картинки
+│   ├── achievements.js               # Загрузка достижений
+│   ├── binary.js                     # Добавление двоичного кода по бокам страницы
+│   ├── project_cards.js              # Рендер карточек проектов
+│   └── update_year.js                # Автообновление года в футере
+├── media/                            # Используемые картинки
 │   ├── achievements/
 │   ├── icons/
 │   ├── main/
 │   ├── project_pizzeria/
 │   └── sounds/
-├── index.html                      # Главная страница
+├── projects/
+│   ├── project_ml.html               # Проект по изучению ML
+│   ├── project_pizzeria.html         # Проект с сайтом пиццерии
+│   └── project_telegram_bot.html     # Проект с телеграм ботом
+├── index.html                        # Главная страница
 ├── LICENSE
-├── project_ml.html                 # Проект по изучению ML
-├── project_pizzeria.html           # Проект с сайтом пиццерии
-├── project_telegram_bot.html       # Проект с телеграм ботом
 ├── README.en.md
 └── README.md
 ```
