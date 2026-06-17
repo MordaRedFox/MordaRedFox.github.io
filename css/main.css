@@ -100,7 +100,7 @@ body {
 
 .about-info h2 {
     font-size: 2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     color: #0f172a;
     position: relative;
     display: inline-block;
@@ -123,13 +123,6 @@ body {
     font-size: 1.05rem;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-bottom: 1.5rem;
-}
-
 .skill-tag {
     background: #eef2ff;
     padding: 0.3rem 1rem;
@@ -147,27 +140,6 @@ body {
     color: white;
     border-color: var(--teal);
     transform: translateY(-2px);
-}
-
-.contacts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-}
-
-.contact-link {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s, transform 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.contact-link:hover {
-    color: #0d9488;
-    transform: translateX(3px);
 }
 
 .section-title {
@@ -193,7 +165,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
-    margin-top: 1rem;
 }
 
 .loading {
@@ -293,8 +264,8 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #0f172a;
-    border-left: 3px solid var(--teal);
-    padding-left: 0.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .skills-list {
@@ -312,7 +283,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 1rem;
 }
 
 .achievement-card {
@@ -356,6 +326,7 @@ body {
 .achievement-title {
     font-size: 1.2rem;
     font-weight: 700;
+    text-align: center;
     margin-bottom: 0.5rem;
     color: #0f172a;
 }
@@ -626,14 +597,6 @@ body {
         font-size: 0.9rem;
     }
 
-    .skills {
-        justify-content: center;
-    }
-
-    .contacts {
-        justify-content: center;
-    }
-
     .section-title {
         font-size: 1.6rem;
         text-align: center;
@@ -770,14 +733,6 @@ body {
         padding: 0.2rem 0.7rem;
     }
 
-    .contacts {
-        gap: 0.8rem;
-    }
-
-    .contact-link {
-        font-size: 0.85rem;
-    }
-
     .section-title {
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
@@ -904,7 +859,7 @@ body {
 
     .about-info h2 {
         font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
     }
 
     .about-info p {
@@ -914,10 +869,6 @@ body {
     .skill-tag {
         font-size: 0.6rem;
         padding: 0.1rem 0.5rem;
-    }
-
-    .contact-link {
-        font-size: 0.75rem;
     }
 
     .section-title {
@@ -1006,10 +957,6 @@ body {
     .skill-tag {
         font-size: 0.55rem;
         padding: 0.05rem 0.4rem;
-    }
-
-    .contact-link {
-        font-size: 0.7rem;
     }
 
     .section-title {

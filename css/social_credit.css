@@ -16,10 +16,11 @@
 }
 
 .like-button:hover {
-    background: linear-gradient(135deg, #ffe4e4, #ffcdcd);
-    border-color: #f43f5e;
+    background: #e6f5e6;
+    border-color: #00ff41;
     transform: scale(1.02);
-    color: #b91c1c;
+    color: #00ff41;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
 }
 
 .like-button:active {
