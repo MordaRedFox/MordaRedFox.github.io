@@ -72,9 +72,12 @@ portfolio/
 │   ├── project.css                   # Styles for project pages
 │   └── social_credit.css             # Meme animation styles for likes
 ├── js/
-│   ├── achievements.js               # Loading achievements
+│   ├── achievements_data.js          # My achievements data
+│   ├── achievements.js               # Achievement card render
 │   ├── binary.js                     # Adding binary code to the sides of the page
+│   ├── nav.js                        # Adds a navigation menu to project cards
 │   ├── project_cards.js              # Rendering project cards
+│   ├── projects_data.js              # My project card data
 │   ├── screenshots_modal.js          # Working with modal windows in project cards
 │   ├── skills_align.js               # Aligns skill card titles
 │   └── update_year.js                # Auto-update the year in the footer

@@ -1,29 +1,9 @@
 // Добавляет карточки достижений на главную страницу и запускает анимацию,
 // если достижению поставить лайк
-const achievementsData = [
-    {
-        image: "media/achievements/it_marathon.png",
-        title: "Победитель хакатона по 1С",
-        description: "С командой занял второе место во Всероссийском IT-марафоне: «Цифровые инструменты для бизнеса – 2025».",
-        orientation: "portrait"
-    },
-    {
-        image: "media/achievements/ru_code_2025.png",
-        title: "Финалист чемпионата «РуКод»",
-        description: "Дошел до финала международного чемпионата по алгоритмическому программированию «РуКод 2025».",
-        orientation: "portrait"
-    },
-    {
-        image: "media/achievements/mtc_true_tech_champ_2025.png",
-        title: "Полуфиналист «True Tech Champ»",
-        description: "Дошел до полуфинала в алгоритмическом треке ИТ-чемпионата MTC «True Tech Champ 2025».",
-        orientation: "portrait"
-    },
-];
-
 const MEME_SONG_URL = "media/sounds/social_credit.mp3";
 let currentAudio = null;
 let animationTimeoutIds = [];
+let likesMemory = [];
 
 function playMemeSong() {
     if (currentAudio) {
@@ -112,18 +92,18 @@ function startSocialCreditParty() {
     animationTimeoutIds.push(cleanContainerTimeout);
 }
 
-let likesMemory = [12, 5, 7];
-
 function renderAchievements() {
     const grid = document.getElementById("achievementsGrid");
     if (!grid) return;
-    if (achievementsData.length === 0) {
+    const data = window.achievementsData || [];
+    if (data.length === 0) {
         grid.innerHTML = "<div class=\"loading-achievements\">Пока нет достижений :(</div>";
         return;
     }
-    const cardsHTML = achievementsData.map((item, idx) => {
+    likesMemory = data.map(item => item.likes || 0);
+    const cardsHTML = data.map((item, idx) => {
         const orientationClass = item.orientation === "portrait" ? "portrait" : "";
-        const likeCount = likesMemory[idx];
+        const likeCount = likesMemory[idx] || 0;
         return `
             <div class="achievement-card" data-achievement-index="${idx}">
                 <img src="${item.image}" 
@@ -149,7 +129,7 @@ function renderAchievements() {
             e.stopPropagation();
             const idx = parseInt(btn.dataset.idx, 10);
             if (isNaN(idx)) return;
-            likesMemory[idx]++;
+            likesMemory[idx] = (likesMemory[idx] || 0) + 1;
             const countSpan = document.getElementById("likeCount-" + idx);
             if (countSpan) countSpan.innerText = likesMemory[idx];
             playMemeSong();
