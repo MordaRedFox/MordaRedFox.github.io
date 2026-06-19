@@ -75,6 +75,7 @@ portfolio/
 │   ├── achievements.js               # Loading achievements
 │   ├── binary.js                     # Adding binary code to the sides of the page
 │   ├── project_cards.js              # Rendering project cards
+│   ├── screenshots_modal.js          # Working with modal windows in project cards
 │   ├── skills_align.js               # Aligns skill card titles
 │   └── update_year.js                # Auto-update the year in the footer
 ├── media/                            # Images used

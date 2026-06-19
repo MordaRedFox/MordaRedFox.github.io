@@ -11,26 +11,6 @@
     <link rel="manifest" href="../media/icons/site.webmanifest">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/binary.css">
-    <style>
-        .feature-card, .feature-card ul, .feature-card li,
-        .setup-block ul, .setup-block li,
-        .features-list li {
-            word-break: break-word;
-            overflow-wrap: break-word;
-            white-space: normal;
-        }
-        .feature-card {
-            width: 100%;
-            overflow: hidden;
-        }
-        .setup-block {
-            overflow-x: auto;
-        }
-        pre {
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-    </style>
 </head>
 <body>
     <div class="binary-wrapper">
@@ -46,7 +26,7 @@
                 <span>🎓 Учебный проект</span>
             </div>
             <div class="project-description-full">
-                <p style="text-align: justify;">
+                <p>
                     Асинхронный Telegram-бот для сбора обратной связи от пользователей.
                     Позволяет отправлять предложения, жалобы и сообщения администратору.
                     Администратор может просматривать неотвеченные сообщения, отвечать
@@ -57,23 +37,19 @@
             </div>
             <h2>🌟 Ключевые возможности</h2>
             <div class="feature-grid">
-                <div class="feature-card" style="overflow-wrap: break-word;
-                     word-break: break-word;">
+                <div class="feature-card">
                     <h3>👤 Для пользователей</h3>
-                    <ul style="padding-left: 1.2rem; margin: 0;
-                        overflow-wrap: break-word; word-break: break-word;">
+                    <ul>
                         <li>🌐 Мультиязычность (русский / английский)</li>
-                        <li>📩 Отправка трех типов сообщений: предложение, жалоба, 
-                            простое сообщение</li>
+                        <li>📩 Отправка трех типов сообщений: предложение, 
+                            жалоба, простое сообщение</li>
                         <li>⏳ Ограничение – одно активное сообщение (новое 
                             только после ответа администратора)</li>
                     </ul>
                 </div>
-                <div class="feature-card" style="overflow-wrap: break-word;
-                     word-break: break-word;">
+                <div class="feature-card">
                     <h3>👨‍💻 Для администратора</h3>
-                    <ul style="padding-left: 1.2rem; margin: 0;
-                        overflow-wrap: break-word; word-break: break-word;">
+                    <ul>
                         <li>🔔 Просмотр неотвеченных сообщений</li>
                         <li>✉️ Ответ на конкретные сообщения (прямо из бота)</li>
                         <li>📜 История переписки с пагинацией</li>
@@ -82,7 +58,7 @@
                 </div>
             </div>
             <h2>🛠 Технологический стек</h2>
-            <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <div class="project-tech-badges">
                 <span class="tech-badge">Python 3.10+</span>
                 <span class="tech-badge">python-telegram-bot 20.0+</span>
                 <span class="tech-badge">SQLite3</span>
@@ -90,68 +66,52 @@
                 <span class="tech-badge">Logging</span>
             </div>
             <h2>🔧 Установка и настройка</h2>
-            <div class="setup-block" style="background: #f8fafc;
-                 border-radius: 1rem; padding: 1rem; margin: 1rem 0;
-                 overflow-wrap: break-word; word-break: break-word;">
-                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">
-                    📋 Требования</h3>
-                <ul style="margin-bottom: 1rem; padding-left: 1.2rem;">
+            <div class="setup-block">
+                <h3>📋 Требования</h3>
+                <ul>
                     <li>Python 3.10 или новее</li>
                     <li>Аккаунт Telegram</li>
                     <li>Бот, созданный через <code>@BotFather</code></li>
                 </ul>
-                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">
-                    🔑 Получение токена и ID</h3>
-                <ul style="margin-bottom: 1rem; padding-left: 1.2rem;">
-                    <li>Найдите <code>@userinfobot</code> в Telegram и 
-                        получите свой <strong>chat ID</strong></li>
-                    <li>Через <code>@BotFather</code> создайте бота и 
-                        получите <strong>токен</strong></li>
+                <h3>🔑 Получение токена и ID</h3>
+                <ul>
+                    <li>Найдите <code>@userinfobot</code> в Telegram и получите свой <strong>chat ID</strong></li>
+                    <li>Через <code>@BotFather</code> создайте бота и получите <strong>токен</strong></li>
                 </ul>
-                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">
-                    ⚙️ Конфигурация</h3>
+                <h3>⚙️ Конфигурация</h3>
                 <p>В файле <code>config.py</code> укажите:</p>
-                <pre style="background: #1e293b; color: #e2e8f0;
-                     padding: 0.75rem; border-radius: 0.75rem; overflow-x: auto;
-                     font-size: 0.85rem; white-space: pre-wrap; word-break: break-all;">
-YOUR_CHAT_ID = '123456789'        # ваш ID
+                <pre>YOUR_CHAT_ID = '123456789'        # ваш ID
 TELEGRAM_BOT_TOKEN = 'токен:бота' # токен от BotFather</pre>
-                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">
-                    📦 Установка и запуск</h3>
-                <pre style="background: #1e293b; color: #e2e8f0;
-                padding: 0.75rem; border-radius: 0.75rem; overflow-x: auto;
-                font-size: 0.85rem; white-space: pre-wrap; word-break: break-all;">
-pip install -r requirements.txt
+                <h3>📦 Установка и запуск</h3>
+                <pre>pip install -r requirements.txt
 python main.py</pre>
             </div>
             <h2>💡 Особенности реализации</h2>
-            <ul class="features-list" style="margin-bottom: 1.5rem;
-                padding-left: 1.2rem; overflow-wrap: break-word;
-                word-break: break-word;">
-                <li>Полностью асинхронная архитектура на 
-                    <code>python-telegram-bot</code> (v20+)</li>
-                <li>Локализация через словари – легко добавить новые языки</li>
-                <li>База данных SQLite хранит все сообщения, диалоги и статусы</li>
-                <li>Логирование всех действий администратора и ошибок</li>
-                <li>Автоматическое создание БД и таблиц при первом запуске</li>
+            <ul class="features-list">
+                <li>Полностью асинхронная архитектура на <code>python-telegram-bot</code> (v20+).</li>
+                <li>Локализация через словари – легко добавить новые языки.</li>
+                <li>База данных SQLite хранит все сообщения, диалоги и статусы.</li>
+                <li>Логирование всех действий администратора и ошибок.</li>
+                <li>Автоматическое создание БД и таблиц при первом запуске.</li>
             </ul>
             <h2>📦 Репозиторий</h2>
+            <p>Проект содержит полный код на Python, в README описан алгоритм 
+                запуска приложения на своей машине.</p>
             <div class="project-links">
                 <a href="https://github.com/MordaRedFox/telegram-feedback-bot"
-                   target="_blank" class="btn">🐙 GitHub репозиторий</a>
+                    target="_blank" class="btn">🐙 GitHub репозиторий</a>
                 <a href="../index.html" class="btn btn-outline">🏠 На главную</a>
             </div>
-            <div class="warning-note" style="background: #e0f2fe;
-                 border-left-color: #0284c7; margin-top: 2rem;">
-                🎓 <strong>Образовательный проект</strong> - я открыт для 
-                конструктивной критики и предложений по улучшению кода. Если вы 
-                нашли ошибку или знаете, как сделать что-то лучше - пожалуйста, 
+            <div class="warning-note warning-note-alt">
+                🎓 <strong>Образовательный проект</strong> – я открыт для 
+                конструктивной критики и предложений по улучшению коду. Если 
+                вы нашли ошибку или знаете, как сделать что-то лучше – пожалуйста, 
                 свяжитесь со мной!
             </div>
         </div>
         <footer class="footer">
-            <p>© <span id="current-year">2026</span> Владислав Куропатин · Проект 
-                <strong>Telegram Feedback Bot</strong></p>
+            <p>© <span id="current-year">2026</span> Владислав Куропатин · 
+                Проект <strong>Telegram Feedback Bot</strong></p>
         </footer>
     </div>
     <script src="../js/update_year.js"></script>

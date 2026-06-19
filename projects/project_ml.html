@@ -26,7 +26,7 @@
                 <span>🎓 Учебный проект</span>
             </div>
             <div class="project-description-full">
-                <p style="text-align: justify;">
+                <p>
                     Проект разработан в рамках изучения основ машинного обучения. 
                     В нем реализованы и проанализированы четыре фундаментальные модели:
                     линейная регрессия, логистическая регрессия, дерево принятия решений 
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <h2>🛠 Технологический стек</h2>
-            <div style="margin: 1rem 0;">
+            <div>
                 <span class="tech-badge">Python 3.10+</span>
                 <span class="tech-badge">Scikit-learn 1.3+</span>
                 <span class="tech-badge">Pandas 2.0+</span>
@@ -81,55 +81,40 @@
                 <span class="tech-badge">Jupyter 1.0+</span>
             </div>
             <h2>📊 Используемые данные</h2>
-            <div style="overflow-x: auto; margin: 1rem 0;">
-                <table style="width: 100%; border-collapse: collapse;
-                       background: white; border-radius: 1rem; overflow: hidden;
-                       box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                    <thead style="background: #eef2ff;">
-                        <tr style="padding: 0.75rem; text-align: center;">
-                            <th style="padding: 0.75rem; text-align: center;">
-                                Набор данных</th>
-                            <th style="padding: 0.75rem; text-align: center;">
-                                Тип задачи</th>
-                            <th style="padding: 0.75rem; text-align: center;">
-                                Размер</th>
+            <div class="project-table-wrapper">
+                <table class="project-table">
+                    <thead>
+                        <tr>
+                            <th>Набор данных</th>
+                            <th>Тип задачи</th>
+                            <th>Размер</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 0.75rem; text-align: center;">
-                                Student Performance</td>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                Регрессия</td>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                395 записей</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e2e8f0;">
-                            <td style="padding: 0.75rem; text-align: center;">
-                                Airline Satisfaction</td>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                Классификация</td>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                130 000 записей</td>
+                        <tr>
+                            <td>Student Performance</td>
+                            <td>Регрессия</td>
+                            <td>395 записей</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                MNIST</td>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                Классификация</td>
-                            <td style="padding: 0.75rem; text-align: center;">
-                                70 000 изображений</td>
+                            <td>Airline Satisfaction</td>
+                            <td>Классификация</td>
+                            <td>130 000 записей</td>
+                        </tr>
+                        <tr>
+                            <td>MNIST</td>
+                            <td>Классификация</td>
+                            <td>70 000 изображений</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <h2>📈 Ключевые результаты</h2>
-            <div class="feature-grid" style="margin-top: 0;">
+            <div class="feature-grid feature-grid-no-margin">
                 <div class="feature-card">
                     <h3>📐 Линейная регрессия</h3>
-                    <p style="text-align: justify;">Выявлены ключевые факторы 
-                        успеваемости, достигнута высокая точность предсказания 
-                        (R², MSE).</p>
+                    <p>Выявлены ключевые факторы успеваемости, достигнута 
+                        высокая точность предсказания (R², MSE).</p>
                 </div>
                 <div class="feature-card">
                     <h3>🎯 Логистическая регрессия</h3>
@@ -138,45 +123,43 @@
                 </div>
                 <div class="feature-card">
                     <h3>🧩 Дерево решений</h3>
-                    <p style="text-align: justify;">Быстрое и интерпретируемое 
-                        распознавание цифр с хорошей базовой точностью.</p>
+                    <p>Быстрое и интерпретируемое распознавание цифр с хорошей 
+                        базовой точностью.</p>
                 </div>
                 <div class="feature-card">
                     <h3>🏆 Случайный лес</h3>
-                    <p style="text-align: justify;">Достигнута точность 
-                        <strong>более 95%</strong> на MNIST без использования 
-                        свёрточных сетей.</p>
+                    <p>Достигнута точность <strong>более 95%</strong> на MNIST 
+                        без использования сверточных сетей.</p>
                 </div>
             </div>
             <h2>📚 Теоретические материалы</h2>
             <p>Проект включает подробные статьи по каждому алгоритму:</p>
-            <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem;">
-                <li>Линейная регрессия – МНК, градиентный спуск, метрики, 
-                    регуляризация</li>
-                <li>Логистическая регрессия – сигмоида, максимизация правдоподобия, 
-                    интерпретация шансов</li>
-                <li>Дерево решений и случайный лес – критерии Джини/энтропия, 
-                    бэггинг, важность признаков</li>
+            <ul class="project-list">
+                <li><strong>Линейная регрессия</strong> – МНК, градиентный 
+                    спуск, метрики, регуляризация.</li>
+                <li><strong>Логистическая регрессия</strong> – сигмоида, 
+                    максимизация правдоподобия, интерпретация шансов.</li>
+                <li><strong>Дерево решений и случайный лес</strong> – критерии 
+                    Джини/энтропия, бэггинг, важность признаков.</li>
             </ul>
             <h2>📦 Репозиторий</h2>
             <p>Проект содержит полный код на Python, Jupyter ноутбуки с 
                 исследованиями, а также русскоязычную и англоязычную версии.</p>
             <div class="project-links">
                 <a href="https://github.com/MordaRedFox/introduction-to-ml-models"
-                   target="_blank" class="btn">🐙 GitHub репозиторий</a>
+                    target="_blank" class="btn">🐙 GitHub репозиторий</a>
                 <a href="../index.html" class="btn btn-outline">🏠 На главную</a>
             </div>
-            <div class="warning-note" style="background: #e0f2fe;
-                 border-left-color: #0284c7; margin-top: 2rem;">
-                🎓 <strong>Образовательный проект</strong> - я открыт для 
-                конструктивной критики и предложений по улучшению кода. Если вы 
-                нашли ошибку или знаете, как сделать что-то лучше - пожалуйста, 
+            <div class="warning-note warning-note-alt">
+                🎓 <strong>Образовательный проект</strong> – я открыт для 
+                конструктивной критики и предложений по улучшению кода. Если 
+                вы нашли ошибку или знаете, как сделать что-то лучше – пожалуйста, 
                 свяжитесь со мной!
             </div>
         </div>
         <footer class="footer">
-            <p>© <span id="current-year">2026</span> Владислав Куропатин · Проект 
-                <strong>Введение в машинное обучение</strong></p>
+            <p>© <span id="current-year">2026</span> Владислав Куропатин · 
+                Проект <strong>Введение в машинное обучение</strong></p>
         </footer>
     </div>
     <script src="../js/update_year.js"></script>
