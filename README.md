@@ -74,18 +74,21 @@ portfolio/
 ├── js/
 │   ├── components/
 │   │   ├── achievements.js           # Рендер карточек достижений
-│   │   ├── nav.js                    # Добавляет навигационное меню в проектов
+│   │   ├── certificates.js           # Рендер карточек сертификатов
+│   │   ├── nav.js                    # Добавляет навигационное меню для проектов
 │   │   ├── projects_cards.js         # Рендер карточек проектов
 │   │   ├── screenshots_modal.js      # Работа с модальными окнами в карточках проектов
 │   │   └── skills_align.js           # Выравнивает заголовки карточек навыков
 │   ├── data/
 │   │   ├── achievements_data.js      # Данные карточек моих достижений
+│   │   ├── certificates_data.js      # Данные карточек моих сертификатов
 │   │   └── projects_data.js          # Данные карточек моих проектов
 │   └── utils/
 │       ├── binary.js                 # Добавление двоичного кода по бокам страницы
 │       └── update_year.js            # Автообновление года в футере
 ├── media/                            # Используемые медиафайлы
 │   ├── achievements/
+│   ├── certificates/
 │   ├── icons/
 │   ├── main/
 │   ├── project_pizzeria/

@@ -74,18 +74,21 @@ portfolio/
 ├── js/
 │   ├── components/
 │   │   ├── achievements.js           # Achievement card render
-│   │   ├── nav.js                    # Adds a navigation menu to projects
+│   │   ├── certificates.js           # Rendering of certificate cards
+│   │   ├── nav.js                    # Adds a navigation menu for projects
 │   │   ├── projects_cards.js         # Rendering project cards
 │   │   ├── screenshots_modal.js      # Working with modal windows in project cards
 │   │   └── skills_align.js           # Aligns skill card titles
 │   ├── data/
 │   │   ├── achievements_data.js      # My achievement cards data
+│   │   ├── certificates_data.js      # My certificate card details
 │   │   └── projects_data.js          # My project card data
 │   └── utils/
 │       ├── binary.js                 # Adding binary code to the sides of the page
 │       └── update_year.js            # Auto-update the year in the footer
 ├── media/                            # Media files used
 │   ├── achievements/
+│   ├── certificates/
 │   ├── icons/
 │   ├── main/
 │   ├── project_pizzeria/
