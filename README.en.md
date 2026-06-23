@@ -66,7 +66,8 @@ Live preview: https://mordaredfox.github.io/
 ```bash
 portfolio/
 ├── css/
-│   ├── binary.css                    # Styles for binary code on the sides
+│   ├── binary.css                    # Styles for binary code on the 
+│   ├── main_certificate.css          # Styles for certificate cards
 │   ├── main_project_card.css         # Project card styles
 │   ├── main.css                      # Basic styles (main page)
 │   ├── project.css                   # Styles for project pages
